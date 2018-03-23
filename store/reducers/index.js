@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({});
+import vote from './vote-reducer';
+
+const rootReducer = combineReducers({ vote });
 
 export default rootReducer;

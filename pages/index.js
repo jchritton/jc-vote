@@ -1,5 +1,5 @@
 import withRedux from 'next-redux-wrapper';
-import App from '../containers/App';
+import Page from '../containers/Page';
 import { compose, setDisplayName, pure, lifecycle, withProps } from 'recompose';
 import { injectGlobal } from 'styled-components';
 import configStore from '../store';
@@ -28,7 +28,7 @@ const Index = compose(
     }
   }),
   pure
-)(App);
+)(Page);
 
 Index.getInitialProps = ({ store, isServer }) => ({ isServer });
 

@@ -1,1 +1,3 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+export default {
+  SET_ENTRIES: 'SET_ENTRIES'
+};

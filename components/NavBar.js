@@ -1,20 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const NavBar = props => (
-  <StyledNav>
+  <StyledNav className="navbar">
     <figure>LOGO IMAGE</figure>
     <ul>
       <li className="user-info">
-        <a>
-          <img className="avatar" src="http://via.placeholder.com/40x40" />
+        <Link href="/profile">
+          <img
+            className="avatar"
+            src="http://via.placeholder.com/40x40"
+            alt="User avatar"
+          />
           <span>Username</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a>Dashboard</a>
+        <Link href="/home">
+          <span>Dashboard</span>
+        </Link>
       </li>
-      <li>{props.loggedIn ? 'Logout' : 'Login'}</li>
+      <li>
+        <Link href="/auth">
+          <span>{props.loggedIn ? 'Logout' : 'Login'}</span>
+        </Link>
+      </li>
     </ul>
   </StyledNav>
 );
